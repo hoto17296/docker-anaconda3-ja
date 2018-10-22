@@ -7,3 +7,7 @@ RUN apt update \
 
 RUN echo "\nfont.family: TakaoPGothic" >> $(python -c 'import matplotlib as m; print(m.matplotlib_fname())') \
   && rm -f ~/.cache/matplotlib/font*
+
+# Support Google Colaboratory
+RUN pip install jupyter_http_over_ws \
+  && jupyter serverextension enable --py jupyter_http_over_ws
