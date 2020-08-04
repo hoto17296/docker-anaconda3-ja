@@ -1,4 +1,4 @@
-FROM continuumio/anaconda3:2020.02
+FROM continuumio/anaconda3:2020.07
 
 SHELL ["/bin/bash", "-l", "-c"]
 
